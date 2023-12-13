@@ -14,6 +14,13 @@ searchbtn.addEventListener('click', async (evt) => {
         .then (response => response.json())
         .then(data => {
             var Mangadata = data?.data || []; //Di kuhaon ang undefined nga data
+
+            if (Mangadata.length === 0) {
+                // Display a message when no titles are found
+                results.innerHTML = "<p>No titles found.</p>";
+                return;
+            }
+    
             Mangadata.forEach(manga => {
                 let mangatitle = manga.attributes.title.en;
                 let mangadesc = manga.attributes.description.en;
