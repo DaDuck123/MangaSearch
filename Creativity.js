@@ -13,7 +13,6 @@ fetch(`https://api.mangadex.org/manga?limit=10&includes%5B%5D=cover_art`)
             results.innerHTML = "<p>No titles found.</p>";
             return;
         }
-
         Mangadata.forEach(manga => {
             let mangatitle = manga.attributes.title.en;
             let mangadesc = manga.attributes.description.en;
@@ -58,7 +57,6 @@ searchbtn.addEventListener('click', async (evt) => {
             var Mangadata = data?.data || []; //Di kuhaon ang undefined nga data
 
             if (Mangadata.length === 0) {
-                // Display a message when no titles are found
                 results.innerHTML = "<p>No titles found.</p>";
                 return;
             }
