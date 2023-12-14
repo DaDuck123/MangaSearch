@@ -54,7 +54,7 @@ Content.innerHTML += `<div id="manga_header">
 
 var results = document.getElementById('manga_result');
 
-for (var loading = 0; loading < 10; loading++) {    //Skeleton Loading Screen
+for (var loading = 0; loading < 20; loading++) {    //Skeleton Loading Screen
     results.innerHTML += `<div class="manga-containerhtml">
     <div id="manga-imghtml">
         <i class='bx bx-image'></i>
@@ -72,7 +72,7 @@ for (var loading = 0; loading < 10; loading++) {    //Skeleton Loading Screen
 var loadingscreen = document.getElementById('manga-containerhtml')
 var searchbtn = document.getElementById('search_btn');
 var searchInput = document.getElementById('search').value;
-fetch(`https://api.mangadex.org/manga?limit=10&includes%5B%5D=cover_art`)
+fetch(`https://api.mangadex.org/manga?limit=20&includes%5B%5D=cover_art`)
     .then(response => response.json())
     .then(data => {
         loadingscreen.style.display = 'none';
@@ -120,11 +120,26 @@ searchbtn.addEventListener('click', async (evt) => {
     var results = document.getElementById('manga_result');
 
     results.innerHTML = "";
-
-    if (search.trim() === "") {
-        return; //Di mo kuhag API rquest ug way input
+    for (var loading = 0; loading < 20; loading++) {    //Skeleton Loading Screen
+        results.innerHTML += `<div class="manga-containerhtml">
+        <div id="manga-imghtml">
+            <i class='bx bx-image'></i>
+        </div>
+        <div id="text-grouphtml">
+            <div id="manga-titlehtml"></div>
+            <div class="manga-deschtml">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+    </div>`
     }
-    fetch(`https://api.mangadex.org/manga?title=${search}&includes%5B%5D=cover_art`)
+
+    if (!search || search === "") {
+        return; //Di mo kuhag API rquest ug way input
+    } 
+    fetch(`https://api.mangadex.org/manga?limit=20&title=${search}&includes%5B%5D=cover_art`)
         .then(response => response.json())
         .then(data => {
             loadingscreen.style.display = 'none';
