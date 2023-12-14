@@ -36,6 +36,7 @@
     height: 50px;
     margin-right: 5px;
 }
+
 #title_shadow {
     display: flex;
     align-items: center;
@@ -74,6 +75,7 @@
     color: white;
     text-shadow: 2px 2px 10px rgb(0, 0, 0, .6);
 }
+
 #search_box {
     margin-left: 400px;
     background-color: #ffffff;
@@ -87,7 +89,7 @@
     color: #adc0d2;
 }
 
-#search_btn{
+#search_btn {
     cursor: pointer;
     outline: none;
     border: none;
@@ -137,7 +139,8 @@
     padding: 0 0 0 10px;
     transition: 0.8s;
 }
-.nav_box:hover{
+
+.nav_box:hover {
     background-color: #000000;
 }
 
@@ -177,9 +180,11 @@
     color: #adc0d2;
     text-align: right;
 }
-.nav_box:hover i:nth-child(1){
+
+.nav_box:hover i:nth-child(1) {
     color: #adc0d2;
 }
+
 #manga_list {
     /*  Main Area   */
     display: flex;
@@ -197,7 +202,7 @@
     border-radius: 10px;
     width: 180px;
     height: 35px;
-    
+
 }
 
 #manga_list i:nth-child(1) {
@@ -237,52 +242,54 @@
     display: none;
 }
 
-.manga-container{
+.manga-container {
     display: flex;
     height: 110px;
     width: 500px;
     padding: 10px;
 }
 
-.manga-containerhtml{
+.manga-containerhtml {
     display: flex;
     height: 110px;
     width: 500px;
     padding: 10px;
 
 }
+
 #manga-titlehtml,
 .manga-deschtml hr,
-.gradient{
-background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
-background-size: 200% 100%;
-animation: animate 1s linear infinite;
+.gradient {
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 200% 100%;
+    animation: animate 1s linear infinite;
 }
+
 @keyframes animate {
     to {
-      background-position-x: -200%;
+        background-position-x: -200%;
     }
-  }
+}
 
 
-#manga-imghtml{
+#manga-imghtml {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     width: 100px;
-    }
-
-#manga-imghtml i{
-  font-size: 120px;
-  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate 1s linear infinite;
 }
 
-#text-grouphtml{
+#manga-imghtml i {
+    font-size: 120px;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1s linear infinite;
+}
+
+#text-grouphtml {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -290,7 +297,7 @@ animation: animate 1s linear infinite;
     width: 400px;
 }
 
-#manga-titlehtml{
+#manga-titlehtml {
     display: flex;
     height: 30px;
     width: 120px;
@@ -298,13 +305,14 @@ animation: animate 1s linear infinite;
     margin-bottom: 20px;
     border-radius: 10px;
 }
-#manga-deschtml{
+
+#manga-deschtml {
     width: 300px;
     height: 50px;
     background-color: #ececec;
 }
 
-.manga-deschtml hr{
+.manga-deschtml hr {
     width: 300px;
     height: 8px;
     border-radius: 10px;
@@ -314,23 +322,25 @@ animation: animate 1s linear infinite;
 }
 
 /*  LOADING SCREEN  */
-#line{
+#line {
     height: 100%;
     width: 100%;
     border-bottom: 1px solid rgb(0, 0, 0, .1);
 }
-#manga-img{
+
+#manga-img {
     flex: 1 0;
     height: 100px;
     width: 50px;
 }
-#manga-img img{
+
+#manga-img img {
     flex: 1 0;
     height: 100px;
     width: 100px;
 }
 
-#text-group{
+#text-group {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -339,7 +349,7 @@ animation: animate 1s linear infinite;
     border-bottom: 1px solid rgb(0, 0, 0, .1);
 }
 
-#manga-title{
+#manga-title {
     display: flex;
     height: 30px;
     justify-content: center;
@@ -347,7 +357,7 @@ animation: animate 1s linear infinite;
     text-align: center;
 }
 
-#manga-desc{
+#manga-desc {
     width: 400px;
     overflow: hidden;
     text-overflow: ellipsis;
